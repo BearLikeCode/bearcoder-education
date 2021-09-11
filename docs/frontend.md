@@ -7,109 +7,22 @@
 * [Senior](#senior)  
 
 ## Junior
-### Javascript Core & Syntax
-* Closures
-* Sets and maps
-* Iterators and generators
-* Metaprogramming
-* Microtask vs Macrotask
-* Regular expressions
 
-### Object Oriented Programming, Functional Progrmming, Async Programming
-* Regular expressions
-* Generator use cases
-* Getters Setters
-* Deep cloning
-* Higher order functions
-* new operator
-* Class Inheritance
-* Super keyword
-* Async await
-* Constructors
-* Static methods
-* Immutability
-* Pure functions
-* typeof / instanceof
-* [Краткое руководство по ооп в js](https://medium.com/nuances-of-programming/%D0%BA%D1%80%D0%B0%D1%82%D0%BA%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D0%BE-%D0%BE%D0%BE%D0%BF-%D0%B2-js-1f54f9d50067)
-* Принципи ООП Javascript
-* [Цикл подій](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
-* [Event Loop, Callbacks, Promises, and Async/Await in JavaScript](https://www.digitalocean.com/community/tutorials/understanding-the-event-loop-callbacks-promises-and-async-await-in-javascript)
-* [Разбираемся с Async/Await в JavaScript на примерах](https://tproger.ru/translations/understanding-async-await-in-javascript/)
+* [Javascript Core & Syntax](./frontend/jscore.md)
+* [Object Oriented Programming, Functional Progrmming, Async Programming](./frontend/jsoop.md)
+* [DOM](./frontend/dom.md)
+ 
+* [React](./frontend/react.md)
+ 
+* [Grid](./frontend/grid.md)
+ 
+* [Git](./frontend/git.md)
 
-### React
-* Animation
-* Hooks
-* Routing
-* Form validation
-* Higher-Order Components
-* Performance
-* Unit testing
-* Isomorphic React Applications
-* Offline application
-* Internationalization
-* Memory leaks
-* Portals
-* Class Components
-* State & Lifecycle Hooks (useState, useEffect, useContext, useReducer, useRef, useMemo, useCallback)
-* Handling Events
-* Forms
-* Component composition
-* Custom Hooks
-* Context
-* Render Props
-* Refs
-* Error Boundaries
-* Props and State
-* Lists and Keys
-* Building Simple Forms
-* Function Components
+* [HTML](./frontend/html.md)
 
-### Grid
-* [Complete guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
-* [What Is CSS Grid](https://www.youtube.com/watch?v=NLLMwJwDgBs&list=PLENJ2rmTAIHAhZBgbBGI9LM9momDVQ4i1&index=10)
-* [Grids Part 1](https://sarahmhigley.com/writing/grids-part1/)
+* [CSS](./frontend/css.md)
 
-### DOM
-* Virtual DOM
-* DOM
-* Document object
-* Window object
-* DOM manipulations
-* DOM selectors
-* DOM events
-* DOM manipulation
-
-### Git
-* [Введение в Git Merge и Git Rebase: зачем и когда их использовать](https://habr.com/ru/post/432420/)
-* [Rebase vs Merge](https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c)
-* [Gitflow Workflow](https://www.atlassian.com/ru/git/tutorials/comparing-workflows/gitflow-workflow)
-
-### HTML
-* Mutlimedia
-* Canvas
-* Drag&Drop
-* Geolocation
-* Web storage
-* Input element customization
-* Embedded content
-* Semantic Elements HTML
-
-### CSS
-* Less/SASS pre-processor
-* CSS selector rules
-* Inheritance
-* Selectors
-* Layouts
-* Transitions, Animations, Transformations
-* Length units (px, em, rem...)
-
-### BEM
-* [Зачем нужен БЭМ](https://www.youtube.com/watch?v=lQPs20b3Ey8)
-* [БЭМ нейминг](https://www.youtube.com/watch?v=4zt8qcZ1OXA)
-* [Решение распространенных проблем веб-разработки с помощью БЭМ](https://ru.bem.info/methodology/solved-problems/)
-* [Основные понятия](https://ru.bem.info/methodology/key-concepts/)
-* [Уровни переопределения](https://ru.bem.info/methodology/redefinition-levels/)
-* [Способы изменения блока](https://ru.bem.info/methodology/block-modification/)
+* [BEM](./frontend/bem.md)
 
 ### Redux
 * Middlewares
