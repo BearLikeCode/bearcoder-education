@@ -10,9 +10,11 @@ function selectionSort(array) {
             }
             count += 1;
         }
-        let tmp = array[i];
-        array[i] = array[indexMin];
-        array[indexMin] = tmp;
+        if (indexMin !== 1) {
+            let tmp = array[i];
+            array[i] = array[indexMin];
+            array[indexMin] = tmp;
+        }
     }
     return array;
 }
