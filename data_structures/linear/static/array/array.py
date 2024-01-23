@@ -1,3 +1,11 @@
+# We create an array named my_array with initial values [1, 2, 3, 4, 5].
+# We access and print individual elements using indexing.
+# We modify the third element of the array to be 10.
+# We append a new element 6 to the end of the array.
+# We remove the second element from the array using the pop method and store the removed element in the variable removed_element.
+# We determine the length of the array using the len function.
+# Finally, we print the modified array, the removed element, and the length of the array.
+
 # Creating an array
 my_array = [1, 2, 3, 4, 5]
 
