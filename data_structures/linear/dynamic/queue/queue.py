@@ -34,6 +34,9 @@ class Queue:
     def size(self):
         return len(self.items)
 
+    def print(self):
+        return self.items
+
 
 # Example usage of the Queue
 queue = Queue()
@@ -55,3 +58,5 @@ print("Is the queue empty?", queue.is_empty())
 
 # Checking the size of the queue
 print("Size of the queue:", queue.size())
+
+print("Queue: ", queue.print())
