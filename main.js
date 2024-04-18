@@ -4,6 +4,7 @@ const app = express();
 const port = process.env.PORT;
 
 app.get("/", (req, res) => {
+  console.log(`host ${request.headers.host}`);
   res.send("Hello, World!");
 });
 
