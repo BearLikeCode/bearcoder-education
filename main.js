@@ -3,7 +3,7 @@ const express = require("express");
 const axios = require("axios");
 
 const app = express();
-const port = process.env.API_PORT;
+const port = process.env.PORT;
 const serversEnv = process.env.API_SERVERS;
 
 const servers = serversEnv.split(";");
