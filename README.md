@@ -2,6 +2,8 @@
 
 Examples are on Python and C# languages
 
+Link to methodology [here](https://docs.google.com/document/d/1hw8SUlmN53HFv8TkfF5ih8m_uYJKHdfWFSQOtCMv1yk/edit?usp=sharing)
+
 ## Data Structure themes
 
 * Arrays
@@ -39,7 +41,7 @@ Examples are on Python and C# languages
 
 ### Graphs
 
-* Djekstra
+* Dijkstra
 * Tree Traversal
   * BFS
   * DFS
