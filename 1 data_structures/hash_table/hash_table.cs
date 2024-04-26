@@ -1,26 +1,99 @@
 using System;
 using System.Collections.Generic;
 
+class HashTable
+{
+    private Dictionary<int, List<KeyValuePair<string, int>>> buckets;
+
+    public HashTable()
+    {
+        buckets = new Dictionary<int, List<KeyValuePair<string, int>>>();
+    }
+
+    private int GetBucketIndex(string key)
+    {
+        return Math.Abs(key.GetHashCode() % buckets.Count);
+    }
+
+    public void Add(string key, int value)
+    {
+        int index = GetBucketIndex(key);
+        if (!buckets.ContainsKey(index))
+        {
+            buckets[index] = new List<KeyValuePair<string, int>>();
+        }
+        else
+        {
+            // Check if key already exists in the bucket
+            foreach (var pair in buckets[index])
+            {
+                if (pair.Key == key)
+                {
+                    throw new ArgumentException("Key already exists");
+                }
+            }
+        }
+
+        // Add key-value pair to the bucket
+        buckets[index].Add(new KeyValuePair<string, int>(key, value));
+    }
+
+    public int Get(string key)
+    {
+        int index = GetBucketIndex(key);
+        if (buckets.ContainsKey(index))
+        {
+            foreach (var pair in buckets[index])
+            {
+                if (pair.Key == key)
+                {
+                    return pair.Value;
+                }
+            }
+        }
+        throw new KeyNotFoundException("Key not found");
+    }
+
+    public void Remove(string key)
+    {
+        int index = GetBucketIndex(key);
+        if (buckets.ContainsKey(index))
+        {
+            for (int i = 0; i < buckets[index].Count; i++)
+            {
+                if (buckets[index][i].Key == key)
+                {
+                    buckets[index].RemoveAt(i);
+                    return;
+                }
+            }
+        }
+        throw new KeyNotFoundException("Key not found");
+    }
+}
+
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Creating a hash table for storing phone numbers
-        Dictionary<string, string> phoneBook = new Dictionary<string, string>();
+        HashTable table = new HashTable();
+        table.Add("apple", 5);
+        table.Add("banana", 7);
+        table.Add("orange", 3);
 
-        // Adding contacts to the hash table
-        phoneBook["Alice"] = "+123456789";
-        phoneBook["Bob"] = "+987654321";
-        phoneBook["Charlie"] = "+111223344";
+        Console.WriteLine("Value for 'apple': " + table.Get("apple"));
+        Console.WriteLine("Value for 'banana': " + table.Get("banana"));
+        Console.WriteLine("Value for 'orange': " + table.Get("orange"));
 
-        // Getting phone numbers by name
-        string aliceNumber = phoneBook.TryGetValue("Alice", out var alice) ? alice : "Number not found";
-        string bobNumber = phoneBook.TryGetValue("Bob", out var bob) ? bob : "Number not found";
-        string daveNumber = phoneBook.TryGetValue("Dave", out var dave) ? dave : "Number not found";
+        table.Remove("apple");
 
-        // Displaying information about contacts
-        Console.WriteLine($"Alice's number: {aliceNumber}");
-        Console.WriteLine($"Bob's number: {bobNumber}");
-        Console.WriteLine($"Dave's number: {daveNumber}");
+        try
+        {
+            Console.WriteLine("Value for 'apple': " + table.Get("apple"));
+        }
+        catch (KeyNotFoundException)
+        {
+            Console.WriteLine("Key 'apple' not found");
+        }
     }
 }
