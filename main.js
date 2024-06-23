@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
     const response = await axios.get(currentServer);
     res.send(response.data);
   } catch (error) {
-    console.error(`Error while forwarding request: ${error.message}`);
+    // console.error(`Error while forwarding request: ${error.message}`);
     res.status(500).send("Internal Server Error");
   }
 });
