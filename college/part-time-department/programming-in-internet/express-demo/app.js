@@ -11,7 +11,6 @@ var app = express();
 
 mongoose
   .connect(
-    "mongodb://bearcoder:edhemnetqx@ac-1rgkbwu-shard-00-00.bqhwmpe.mongodb.net:27017,ac-1rgkbwu-shard-00-01.bqhwmpe.mongodb.net:27017,ac-1rgkbwu-shard-00-02.bqhwmpe.mongodb.net:27017/?replicaSet=atlas-i4xoqa-shard-0&ssl=true&authSource=admin"
   )
   .then(() => console.log("Connected!"))
   .catch((e) => console.log(`Error with db: ${e}`));
